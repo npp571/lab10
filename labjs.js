@@ -7,9 +7,9 @@ function greetuser(){
 greetuser()
 
 function changeText(){
-    document.getElementById("message").innerText = "Hello, World!";
+    let newmessage = document.getElementById("message");
+    newmessage.innerText = "Hello, World!";
 }
-changeText()
 
 function addNumbers(){
     let number1 = parseFloat(document.getElementById('number1').value);
@@ -20,14 +20,21 @@ function addNumbers(){
 addNumbers()
 
 function updateTitle(){
-    let newTitle = document.getElementById(`inputfield`).value;
-    document.getElementById(`title`).textContext = newTitle;
+    let newTitle = document.getElementById("inputfield").value;
+    let titletext = document.getElementById("title");
+    titletext.innerText = newTitle;
 }
-updateTitle()
 
-function concatenateStrings(){
-    let str1 = document.getElementById(`string1`).value;
-    let str2 = document.getElementById(`string2`).value;
-    let result = str1 + str2;
-    document.getElementById(`combinedText`).textContent = result;
+
+function concatenatestrings(){
+    let str1 = document.getElementById("string1").value;
+    let str2 = document.getElementById("string2").value;
+    let result = document.getElementById("combinedtext");
+    result.innerText = `${str1} ${str2}`;
 }
+
+
+    document.getElementById("changebackground").addEventListener("click", function(){
+            let colorbox = document.getElementById("colorbox");
+            colorbox.style.backgroundColor = "blue";
+    })
