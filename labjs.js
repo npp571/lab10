@@ -9,6 +9,7 @@ greetuser()
 function changeText(){
     document.getElementById("message").innerText = "Hello, World!";
 }
+changeText()
 
 function addNumbers(){
     let number1 = parseFloat(document.getElementById('number1').value);
@@ -22,6 +23,7 @@ function updateTitle(){
     let newTitle = document.getElementById(`inputfield`).value;
     document.getElementById(`title`).textContext = newTitle;
 }
+updateTitle()
 
 function concatenateStrings(){
     let str1 = document.getElementById(`string1`).value;
